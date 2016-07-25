@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"/>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/mylinecolor" />
+
+        <LinearLayout
+            android:id="@+id/console_line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:layout_gravity="bottom"
+            android:background="#f9f8f9"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/rg_tab_bar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_biji"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/tab_menu_note"
+                    android:text="笔记"
+                    android:textSize="20dp"/>
+                <RadioButton
+                    android:id="@+id/rb_riji"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/tab_menu_daily"
+                    android:text="日记"
+                    android:textSize="20dp"/>
+                <RadioButton
+                    android:id="@+id/rb_xiguan"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/tab_menu_xiguan"
+                    android:text="习惯"
+                    android:textSize="20dp"/>
+                <RadioButton
+                    android:id="@+id/rb_guanli"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/tab_menu_person"
+                    android:text="管理"
+                    android:textSize="20dp"/>
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </LinearLayout>
+</TabHost>

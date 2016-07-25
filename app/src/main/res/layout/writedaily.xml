@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/writedaily_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="写日记"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TableLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:stretchColumns="1"
+            android:id="@+id/tableLayout2">
+
+        <TableRow>
+            <TextView
+                android:textSize="25dp"
+                android:layout_height="wrap_content"
+                android:text="日期："/>
+            <EditText
+                android:layout_height="wrap_content"
+                android:id="@+id/writedaily_date"
+                />
+        </TableRow>
+            <TableRow>
+                <TextView
+                    android:textSize="25dp"
+                    android:layout_height="wrap_content"
+                    android:text="天气："/>
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:id="@+id/writedaily_weather"
+                    />
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="正文:"
+            android:textSize="25dp"
+            android:layout_below="@+id/tableLayout2"/>
+        <EditText
+            android:id="@+id/writedaily_daily"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:minLines="10"
+            android:maxLines="12"
+            android:scrollbars="vertical"
+            android:background="@android:drawable/edit_text"
+            android:layout_below="@+id/textView3"/>
+
+
+
+        <Button
+            android:id="@+id/writedaily_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="写完"
+            android:textSize="25dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/accent_material_dark" />
+
+    </RelativeLayout>
+
+</LinearLayout>

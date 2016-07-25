@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accent_material_dark">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的笔记"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/shownote_note"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:textSize="25dp"
+        android:text="笔记..."
+        android:layout_gravity="top"
+        android:minLines="15"
+        android:maxLines="18"
+        android:scrollbars="vertical"
+        android:layout_marginTop="50dp"
+        android:background="@android:drawable/edit_text"/>
+
+    <Button
+        android:id="@+id/shownote_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除笔记"
+        android:textSize="25dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_light" />
+
+</RelativeLayout>
